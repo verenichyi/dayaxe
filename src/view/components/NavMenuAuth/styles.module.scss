@@ -1,0 +1,25 @@
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 25px;
+
+  &__loginButton,
+  &__signupButton {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__loginButton {
+    border-radius: 50px;
+    padding: 13px 40px;
+    background: linear-gradient(90deg, #1eb6ff 0%, #4edbfcff 100%);
+  }
+
+  &__signupButton {
+    background: transparent;
+  }
+}

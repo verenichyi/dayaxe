@@ -1,0 +1,13 @@
+.weather {
+  display: flex;
+  align-items: center;
+  color: #fff;
+
+  &__divider {
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    margin: 0 5px;
+  }
+}

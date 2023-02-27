@@ -32,8 +32,7 @@ body {
   }
 }
 
-.container,
-.header-container {
+.container {
   padding: 0 24px;
   margin: 0 auto;
 }
@@ -87,8 +86,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .container,
-  .header-container {
+  .container {
     padding: 0 40px;
   }
 }
@@ -96,11 +94,5 @@ body {
 @media screen and (min-width: 1024px) {
   .container {
     max-width: 1210px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .header-container {
-    max-width: 1360px;
   }
 }
