@@ -1,0 +1,21 @@
+.select {
+  position: relative;
+  color: #505050ff;
+  padding: 25px 25px 20px 10px;
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .select {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 18px 10px;
+  }
+}
