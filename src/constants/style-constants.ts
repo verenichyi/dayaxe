@@ -1,4 +1,4 @@
-export default {
+const StyleConstants = {
   $primaryColor: '#2eb7ee',
   $primaryTextColor: '#505050',
   $whiteColor: '#ffffff',
@@ -21,3 +21,5 @@ export default {
   $howItWorksBackground:
     'linear-gradient(180deg, rgba(242, 242, 242, 1) 50%, rgba(255, 255, 255, 1) 50%)',
 };
+
+export default StyleConstants;

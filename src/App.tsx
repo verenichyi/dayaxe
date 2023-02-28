@@ -1,9 +1,9 @@
 import React from 'react';
-import './app-styles/App.scss';
 import { Routes, Route } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import MainLayout from './layouts/MainLayout';
 import MainPage from './pages/MainPage';
+import './app-styles/App.scss';
 import { Routes as RoutePaths } from './enums/routes';
 
 const App = () => {

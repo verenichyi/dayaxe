@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './styles.module.scss';
 import WeatherWidget from '../../components/WeatherWidget';
 import LogoLink from '../../components/LogoLink';
 import NavMenu from '../../components/NavMenu';
+import styles from './styles.module.scss';
 
 const Header = () => {
   return (

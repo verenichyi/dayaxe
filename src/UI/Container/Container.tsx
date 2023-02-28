@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren } from 'react';
 import styles from './styles.module.scss';
 
 const Container = ({ children }: PropsWithChildren) => {

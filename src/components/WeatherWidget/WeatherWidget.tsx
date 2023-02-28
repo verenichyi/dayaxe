@@ -1,6 +1,5 @@
 import React from 'react';
 import oval from '../../assets/images/header/oval.png';
-
 import styles from './styles.module.scss';
 
 const WeatherWidget = () => {

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-
-import styles from './styles.module.scss';
 import { NavLink } from 'react-router-dom';
 import LogoLink from '../LogoLink';
 import NavMenuAuth from '../NavMenuAuth';
+import styles from './styles.module.scss';
 
 const navLinks = [
   { to: 'help', link: 'Help' },
