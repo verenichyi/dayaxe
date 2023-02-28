@@ -11,6 +11,9 @@ const App = () => {
     <Routes>
       <Route path={RoutePaths.Home} element={<MainLayout />}>
         <Route index element={<MainPage />} />
+        <Route path={RoutePaths.Help} element={'<Help />'} />
+        <Route path={RoutePaths.HowItWorks} element={'<HowItWorks />'} />
+        <Route path={RoutePaths.ForPartners} element={'<ForPartners />'} />
       </Route>
       <Route path={RoutePaths.NotFound} element={<NotFound />} />
     </Routes>

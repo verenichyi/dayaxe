@@ -1,13 +1,17 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Footer from '../../modules/Footer';
 import PrimarySection from '../../modules/PrimarySection';
 import styles from './styles.module.scss';
+import { Routes } from '../../enums/routes';
+import Header from '../../modules/Header';
 
 const MainLayout = () => {
+  const { pathname } = useLocation();
+
   return (
     <div className={styles.layout}>
-      <PrimarySection />
+      {pathname === Routes.Home ? <PrimarySection /> : <Header />}
       <main className={styles.main}>
         <Outlet />
       </main>

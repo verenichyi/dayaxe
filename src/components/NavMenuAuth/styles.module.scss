@@ -23,3 +23,33 @@
     background: transparent;
   }
 }
+
+.auth.auth_secondary {
+  .auth {
+    &__loginButton {
+      cursor: pointer;
+      padding: 14px 40px;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #1eb6ff 0%, #4edbfcff 100%);;
+      color: #fff;
+      font-weight: 700;
+      transition: color 0.1s ease;
+
+      &:hover {
+        padding: 12px 38px;
+        border: 2px solid #2EB7EEFF;
+        background: transparent;
+        color: #2EB7EEFF;
+      }
+    }
+
+    &__signupButton {
+      color: #2eb7ee;
+
+      &:hover {
+        color: #505050;
+      }
+    }
+  }
+}

@@ -10,7 +10,11 @@ const navLinks = [
   { to: 'for-partners', link: 'For partners' },
 ];
 
-const NavMenu = () => {
+interface Props {
+  isPrimaryPage?: boolean;
+}
+
+const NavMenu = ({ isPrimaryPage = true }: Props) => {
   const [isMenuActive, setIsMenuActive] = useState(false);
 
   const handleOnMenuClick = () => {
@@ -31,7 +35,11 @@ const NavMenu = () => {
   );
 
   return (
-    <div className={`${styles.menu} ${isMenuActive ? styles.menu_active : ''}`}>
+    <div
+      className={`${styles.menu} ${isMenuActive ? styles.menu_active : ''} ${
+        !isPrimaryPage ? styles.menu_secondary : ''
+      }`}
+    >
       <div
         onClick={handleOnMenuClick}
         className={`${styles.menu__button} ${isMenuActive ? styles.menu__button_active : ''}`}
@@ -44,7 +52,7 @@ const NavMenu = () => {
         </div>
         {menuList}
         <div className={styles.menu__auth}>
-          <NavMenuAuth />
+          <NavMenuAuth isPrimaryPage={isPrimaryPage}/>
         </div>
       </nav>
     </div>
