@@ -1,0 +1,51 @@
+.primarySection{
+  background-color: #2EB7EEFF;
+}
+
+.backgroundContainer {
+  background-image: url('../../../assets/images/header/main-pic.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.content {
+  color: #fff;
+  padding-bottom: 25px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 480px) {
+  .content {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    line-height: 70px;
+    font-size: 56px;
+    max-width: 390px;
+    margin-top: 130px;
+    margin-bottom: 45px;
+  }
+
+  .content {
+    padding-bottom: 205px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .title {
+    max-width: 410px;
+    margin-bottom: 110px;
+    line-height: 65px;
+  }
+}
