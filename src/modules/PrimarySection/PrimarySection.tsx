@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import Container from '../../UI/Container';
-import Header from "../Header";
+import Header from '../Header';
 
 const PrimarySection = () => {
   return (
