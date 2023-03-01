@@ -1,9 +1,17 @@
 @import '../../app-styles/variables';
+@import '../../app-styles/breakpoints';
 
 .guests {
   position: relative;
   color: $primary-text-color;
   padding: 25px 25px 20px 10px;
+
+  @include screen-md {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 18px 15px 18px 10px;
+  }
 }
 
 .icon {
@@ -11,13 +19,4 @@
   top: 50%;
   right: 0;
   transform: translate(0, -50%);
-}
-
-@media screen and (min-width: 768px) {
-  .guests {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 18px 15px 18px 10px;
-  }
 }

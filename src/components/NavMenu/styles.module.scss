@@ -1,4 +1,5 @@
 @import '../../app-styles/variables';
+@import '../../app-styles/breakpoints';
 
 .menu {
   z-index: 2;
@@ -115,7 +116,36 @@
   }
 }
 
-@media screen and (min-width: 480px) {
+.menu.menu_secondary {
+  .menu {
+    &__button {
+      & span,
+      &:before,
+      &:after {
+        background-color: $primary-color;
+      }
+    }
+
+    &__body {
+      background-color: $white-color;
+    }
+
+    &__link {
+      color: $primary-text-color;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      &_active {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+@include screen-sm {
   .menu {
     &__body {
       width: 360px;
@@ -128,7 +158,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@include screen-lg {
   .menu {
     &__button,
     &__logo {
@@ -167,35 +197,6 @@
 
     &__auth {
       margin: 0 0 0 40px;
-    }
-  }
-}
-
-.menu.menu_secondary {
-  .menu {
-    &__button {
-      & span,
-      &:before,
-      &:after {
-        background-color: $primary-color;
-      }
-    }
-
-    &__body {
-      background-color: $white-color;
-    }
-
-    &__link {
-      color: $primary-text-color;
-      transition: all 0.2s ease;
-
-      &:hover {
-        color: $primary-color;
-      }
-
-      &_active {
-        color: $primary-color;
-      }
     }
   }
 }

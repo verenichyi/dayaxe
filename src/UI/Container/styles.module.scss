@@ -1,16 +1,14 @@
+@import '../../app-styles/breakpoints';
+
 .container {
   padding: 0 24px;
   margin: 0 auto;
-}
 
-@media screen and (min-width: 768px) {
-  .container {
+  @include screen-md {
     padding: 0 40px;
   }
-}
 
-@media screen and (min-width: 1024px) {
-  .container {
+  @include screen-lg {
     max-width: 1210px;
   }
 }
