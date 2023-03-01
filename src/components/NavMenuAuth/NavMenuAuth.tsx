@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './styles.module.scss';
 
 interface Props {
-  isPrimaryPage?: boolean;
+  isPrimaryPage: boolean;
 }
 
-const NavMenuAuth = ({ isPrimaryPage = true }: Props) => {
+const NavMenuAuth = ({ isPrimaryPage }: Props) => {
   return (
     <div className={`${styles.auth} ${!isPrimaryPage ? styles.auth_secondary : ''}`}>
       <button className={styles.auth__loginButton}>Login</button>

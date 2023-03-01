@@ -8,6 +8,7 @@ import { Routes } from '../../enums/routes';
 
 const Header = () => {
   const { pathname } = useLocation();
+  const isPrimaryPage = pathname === Routes.Home;
 
   return pathname === Routes.Home ? (
     <header className={styles.header}>
@@ -16,13 +17,13 @@ const Header = () => {
         <div className={styles.weather}>
           <WeatherWidget />
         </div>
-        <NavMenu />
+        <NavMenu isPrimaryPage={isPrimaryPage}/>
       </div>
     </header>
   ) : (
     <header className={styles.header}>
       <div style={{ justifyContent: 'flex-end' }} className={styles.container}>
-        <NavMenu isPrimaryPage={false}/>
+        <NavMenu isPrimaryPage={isPrimaryPage}/>
       </div>
     </header>
   );

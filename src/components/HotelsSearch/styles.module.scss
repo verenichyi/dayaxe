@@ -1,13 +1,15 @@
+@import '../../app-styles/variables';
+
 .search {
   padding: 0 15px 15px;
-  background-color: #fff;
+  background-color: $white-color;
   border-radius: 6px;
 
   &__field {
     cursor: pointer;
 
     &:not(:last-child) {
-      border-bottom: 2px solid #F5F5F5FF;
+      border-bottom: 2px solid $divider;
     }
   }
 
@@ -15,20 +17,20 @@
     width: 100%;
     border: none;
     border-radius: 50px;
-    color: #fff;
-    background: linear-gradient(90deg, #1eb6ff 0%, #4edbfcff 100%);
+    color: $white-color;
+    background: $primary-gradient;
     text-align: center;
     font-weight: 700;
     font-size: 16px;
     padding: 20px 5px;
     cursor: pointer;
-    box-shadow: 0 8px 20px #1EB6FF3D;
+    box-shadow: $button-shadow;
 
     &:hover {
-      border: 2px solid #2EB7EEFF;
+      border: 2px solid $primary-color;
       padding: 18px 5px;
       background: transparent;
-      color: #2EB7EEFF;
+      color: $primary-color;
       box-shadow: none;
     }
   }
@@ -54,7 +56,7 @@
 
       &:not(:last-child) {
         border-bottom: 0;
-        border-right: 2px solid #F5F5F5FF;
+        border-right: 2px solid $divider;
       }
     }
 

@@ -1,3 +1,5 @@
+@import '../../app-styles/variables';
+
 .searchForm {
   &__filter {
     overflow-x: hidden;
@@ -12,7 +14,7 @@
 
   &__filterItem {
     flex-shrink: 0;
-    color: #fff;
+    color: $white-color;
     font-size: 16px;
     padding: 5px 15px;
     cursor: pointer;
@@ -29,14 +31,14 @@
 @media screen and (min-width: 1024px) {
   .searchForm {
     &__filterItem {
-      color: #505050FF;
-      background-color: #fff;
+      color: $primary-text-color;
+      background-color: $white-color;
       border-radius: 50px;
       opacity: 1;
 
       &_active {
         font-weight: 400;
-        color: #2EB7EEFF;
+        color: $primary-color;
       }
     }
   }

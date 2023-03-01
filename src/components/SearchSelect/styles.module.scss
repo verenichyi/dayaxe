@@ -1,6 +1,8 @@
+@import '../../app-styles/variables';
+
 .select {
   position: relative;
-  color: #505050ff;
+  color: $primary-text-color;
   padding: 25px 25px 20px 10px;
 
   &__icon {

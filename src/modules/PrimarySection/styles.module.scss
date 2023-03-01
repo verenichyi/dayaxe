@@ -1,5 +1,7 @@
+@import '../../app-styles/variables';
+
 .primarySection{
-  background-color: #2EB7EEFF;
+  background-color: $primary-color;
 }
 
 .backgroundContainer {

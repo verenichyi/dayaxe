@@ -11,10 +11,10 @@ const navLinks = [
 ];
 
 interface Props {
-  isPrimaryPage?: boolean;
+  isPrimaryPage: boolean;
 }
 
-const NavMenu = ({ isPrimaryPage = true }: Props) => {
+const NavMenu = ({ isPrimaryPage }: Props) => {
   const [isMenuActive, setIsMenuActive] = useState(false);
 
   const handleOnMenuClick = () => {
@@ -34,25 +34,26 @@ const NavMenu = ({ isPrimaryPage = true }: Props) => {
     </ul>
   );
 
+  const dynamicClassNames = {
+    menu: `${styles.menu} ${isMenuActive ? styles.menu_active : ''} ${
+      !isPrimaryPage ? styles.menu_secondary : ''
+    }`,
+    menuButton: `${styles.menu__button} ${isMenuActive ? styles.menu__button_active : ''}`,
+    menuBody: `${styles.menu__body} ${isMenuActive ? styles.menu__body_active : ''}`,
+  };
+
   return (
-    <div
-      className={`${styles.menu} ${isMenuActive ? styles.menu_active : ''} ${
-        !isPrimaryPage ? styles.menu_secondary : ''
-      }`}
-    >
-      <div
-        onClick={handleOnMenuClick}
-        className={`${styles.menu__button} ${isMenuActive ? styles.menu__button_active : ''}`}
-      >
+    <div className={dynamicClassNames.menu}>
+      <div onClick={handleOnMenuClick} className={dynamicClassNames.menuButton}>
         <span></span>
       </div>
-      <nav className={`${styles.menu__body} ${isMenuActive ? styles.menu__body_active : ''}`}>
+      <nav className={dynamicClassNames.menuBody}>
         <div className={styles.menu__logo}>
           <LogoLink />
         </div>
         {menuList}
         <div className={styles.menu__auth}>
-          <NavMenuAuth isPrimaryPage={isPrimaryPage}/>
+          <NavMenuAuth isPrimaryPage={isPrimaryPage} />
         </div>
       </nav>
     </div>

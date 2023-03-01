@@ -1,3 +1,5 @@
+@import '../../app-styles/variables';
+
 .auth {
   display: flex;
   align-items: center;
@@ -8,7 +10,7 @@
   &__signupButton {
     font-size: 16px;
     font-weight: 700;
-    color: #fff;
+    color: $white-color;
     border: none;
     cursor: pointer;
   }
@@ -16,7 +18,7 @@
   &__loginButton {
     border-radius: 50px;
     padding: 13px 40px;
-    background: linear-gradient(90deg, #1eb6ff 0%, #4edbfcff 100%);
+    background: $primary-gradient;
   }
 
   &__signupButton {
@@ -31,24 +33,24 @@
       padding: 14px 40px;
       border: none;
       border-radius: 50px;
-      background: linear-gradient(90deg, #1eb6ff 0%, #4edbfcff 100%);;
-      color: #fff;
+      background: $primary-gradient;
+      color: $white-color;
       font-weight: 700;
       transition: color 0.1s ease;
 
       &:hover {
         padding: 12px 38px;
-        border: 2px solid #2EB7EEFF;
+        border: 2px solid $primary-color;
         background: transparent;
-        color: #2EB7EEFF;
+        color: $primary-color;
       }
     }
 
     &__signupButton {
-      color: #2eb7ee;
+      color: $primary-color;
 
       &:hover {
-        color: #505050;
+        color: $primary-text-color;
       }
     }
   }
