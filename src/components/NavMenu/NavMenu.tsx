@@ -26,7 +26,12 @@ const NavMenu = ({ isPrimaryPage }: Props) => {
     <ul className={styles.menu__list}>
       {navLinks.map((link) => (
         <li key={link.to}>
-          <NavLink to={link.to} className={styles.menu__link}>
+          <NavLink
+            to={link.to}
+            className={({ isActive }: { isActive: boolean }) =>
+              isActive ? `${styles.menu__link} ${styles.menu__link_active}` : styles.menu__link
+            }
+          >
             {link.link}
           </NavLink>
         </li>
@@ -49,7 +54,7 @@ const NavMenu = ({ isPrimaryPage }: Props) => {
       </div>
       <nav className={dynamicClassNames.menuBody}>
         <div className={styles.menu__logo}>
-          <LogoLink isPrimaryPage={isPrimaryPage}/>
+          <LogoLink isPrimaryPage={isPrimaryPage} />
         </div>
         {menuList}
         <div className={styles.menu__auth}>
