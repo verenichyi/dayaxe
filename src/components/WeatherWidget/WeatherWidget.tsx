@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useContext } from "react";
 import styles from './styles.module.scss';
 import icons from '../../assets/icons.svg';
+import { HeaderContext } from "../../modules/Header/Header";
 
-interface Props {
-  isPrimaryPage: boolean;
-}
+const WeatherWidget = () => {
+  const { isPrimaryPage } = useContext(HeaderContext);
 
-const WeatherWidget = ({ isPrimaryPage }: Props) => {
   return (
     <article className={`${styles.weather} ${!isPrimaryPage ? styles.secondary : ''}`}>
       <svg className={styles.icon}>

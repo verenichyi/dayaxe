@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import LogoLink from '../LogoLink';
 import NavMenuAuth from '../NavMenuAuth';
 import styles from './styles.module.scss';
+import { HeaderContext } from '../../modules/Header/Header';
 
 const navLinks = [
   { to: 'help', link: 'Help' },
@@ -10,11 +11,8 @@ const navLinks = [
   { to: 'for-partners', link: 'For partners' },
 ];
 
-interface Props {
-  isPrimaryPage: boolean;
-}
-
-const NavMenu = ({ isPrimaryPage }: Props) => {
+const NavMenu = () => {
+  const { isPrimaryPage } = useContext(HeaderContext);
   const [isMenuActive, setIsMenuActive] = useState(false);
 
   const handleOnMenuClick = () => {
@@ -54,11 +52,11 @@ const NavMenu = ({ isPrimaryPage }: Props) => {
       </div>
       <nav className={dynamicClassNames.menuBody}>
         <div className={styles.menu__logo}>
-          <LogoLink isPrimaryPage={isPrimaryPage} />
+          <LogoLink />
         </div>
         {menuList}
         <div className={styles.menu__auth}>
-          <NavMenuAuth isPrimaryPage={isPrimaryPage} />
+          <NavMenuAuth />
         </div>
       </nav>
     </div>

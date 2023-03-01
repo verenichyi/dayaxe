@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './styles.module.scss';
+import { HeaderContext } from '../../modules/Header/Header';
 
-interface Props {
-  isPrimaryPage: boolean;
-}
+const NavMenuAuth = () => {
+  const { isPrimaryPage } = useContext(HeaderContext);
 
-const NavMenuAuth = ({ isPrimaryPage }: Props) => {
   return (
     <div className={`${styles.auth} ${!isPrimaryPage ? styles.auth_secondary : ''}`}>
       <button className={styles.auth__loginButton}>Login</button>

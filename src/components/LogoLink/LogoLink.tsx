@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './styles.module.scss';
 import icons from '../../assets/icons.svg';
+import { HeaderContext } from '../../modules/Header/Header';
 
-interface Props {
-  isPrimaryPage: boolean;
-}
+const LogoLink = () => {
+  const { isPrimaryPage } = useContext(HeaderContext);
 
-const LogoLink = ({ isPrimaryPage }: Props) => {
   return (
     <NavLink to="/" className={`${styles.logo} ${!isPrimaryPage ? styles.secondary : ''}`}>
       <svg className={styles.icon}>
