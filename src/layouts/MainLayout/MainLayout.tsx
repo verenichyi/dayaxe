@@ -2,9 +2,9 @@ import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Footer from '../../modules/Footer';
 import PrimarySection from '../../modules/PrimarySection';
+import Header from '../../modules/Header';
 import styles from './styles.module.scss';
 import { Routes } from '../../enums/routes';
-import Header from '../../modules/Header';
 
 const MainLayout = () => {
   const { pathname } = useLocation();

@@ -4,12 +4,31 @@
   display: flex;
   align-items: center;
   color: $white-color;
+}
 
-  &__divider {
-    border-radius: 50%;
-    width: 5px;
-    height: 5px;
-    background-color: $white-color;
-    margin: 0 5px;
+.divider {
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: $white-color;
+  margin: 0 5px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  fill: $white-color;
+}
+
+.weather.secondary {
+  color: $primary-color;
+
+  .divider {
+    background-color: $primary-color;
+  }
+
+  .icon {
+    fill: $primary-color;
+    filter: drop-shadow(0px 0px 1px $primary-color);
   }
 }

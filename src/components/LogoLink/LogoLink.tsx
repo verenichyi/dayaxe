@@ -1,12 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './styles.module.scss';
-import logo from '../../assets/images/header/logo.png';
+import icons from '../../assets/icons.svg';
 
-const LogoLink = () => {
+interface Props {
+  isPrimaryPage: boolean;
+}
+
+const LogoLink = ({ isPrimaryPage }: Props) => {
   return (
-    <NavLink to="/" className={styles.logo}>
-      <img src={logo} alt="logo" />
+    <NavLink to="/" className={`${styles.logo} ${!isPrimaryPage ? styles.secondary : ''}`}>
+      <svg className={styles.icon}>
+        <use xlinkHref={`${icons}#logo`} />
+      </svg>
       <p className={styles.text}>dayaxe</p>
     </NavLink>
   );

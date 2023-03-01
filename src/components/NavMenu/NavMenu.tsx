@@ -49,7 +49,7 @@ const NavMenu = ({ isPrimaryPage }: Props) => {
       </div>
       <nav className={dynamicClassNames.menuBody}>
         <div className={styles.menu__logo}>
-          <LogoLink />
+          <LogoLink isPrimaryPage={isPrimaryPage}/>
         </div>
         {menuList}
         <div className={styles.menu__auth}>

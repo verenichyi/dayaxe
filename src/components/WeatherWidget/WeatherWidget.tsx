@@ -1,13 +1,19 @@
 import React from 'react';
-import oval from '../../assets/images/header/oval.png';
 import styles from './styles.module.scss';
+import icons from '../../assets/icons.svg';
 
-const WeatherWidget = () => {
+interface Props {
+  isPrimaryPage: boolean;
+}
+
+const WeatherWidget = ({ isPrimaryPage }: Props) => {
   return (
-    <article className={styles.weather}>
-      <img src={oval} alt="weather-icon" />
+    <article className={`${styles.weather} ${!isPrimaryPage ? styles.secondary : ''}`}>
+      <svg className={styles.icon}>
+        <use xlinkHref={`${icons}#sunny`} />
+      </svg>
       <div>90 &deg;F</div>
-      <span className={styles.weather__divider}></span>
+      <span className={styles.divider}></span>
       <p>Sunny</p>
     </article>
   );
