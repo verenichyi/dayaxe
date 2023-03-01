@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import LogoLink from '../LogoLink';
+import LogoLink from '../../UI/LogoLink';
 import NavMenuAuth from '../NavMenuAuth';
 import styles from './styles.module.scss';
 import { HeaderContext } from '../../modules/Header/Header';
