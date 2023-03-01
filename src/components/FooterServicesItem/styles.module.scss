@@ -1,0 +1,30 @@
+@import '../../app-styles/variables';
+@import '../../app-styles/breakpoints';
+
+.servicesItem {
+  @include screen-md {
+    width: 30%;
+  }
+
+  @include screen-xl {
+    width: 25%;
+  }
+}
+
+.servicesTitle {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 800;
+  color: $primary-color;
+  margin-bottom: 23px;
+}
+
+.servicesItemList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.listLink {
+  color: $primary-text-color;
+}
