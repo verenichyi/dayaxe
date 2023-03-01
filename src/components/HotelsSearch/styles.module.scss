@@ -1,0 +1,69 @@
+@import '../../app-styles/variables';
+
+.search {
+  padding: 0 15px 15px;
+  background-color: $white-color;
+  border-radius: 6px;
+
+  &__field {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid $divider;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    color: $white-color;
+    background: $primary-gradient;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 20px 5px;
+    cursor: pointer;
+    box-shadow: $button-shadow;
+
+    &:hover {
+      border: 2px solid $primary-color;
+      padding: 18px 5px;
+      background: transparent;
+      color: $primary-color;
+      box-shadow: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search {
+    display: flex;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 50px;
+
+    &__fields {
+      display: flex;
+      align-items: center;
+      flex: 1 1 auto;
+    }
+
+    &__field {
+      width: 33.3%;
+      padding: 0 30px;
+      border-bottom: none;
+
+      &:not(:last-child) {
+        border-bottom: 0;
+        border-right: 2px solid $divider;
+      }
+    }
+
+    &__button {
+      max-width: 130px;
+      flex: 1 1;
+      font-size: inherit;
+    }
+  }
+}

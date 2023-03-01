@@ -1,0 +1,30 @@
+@import '../../app-styles/variables';
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 28px;
+  height: 32px;
+  fill: $white-color;
+}
+
+.text {
+    font-size: 2em;
+    font-weight: 200;
+    color: $white-color;
+}
+
+.logo.secondary {
+  .icon {
+    fill: $primary-color;
+  }
+
+  .text {
+    color: $primary-color;
+  }
+}

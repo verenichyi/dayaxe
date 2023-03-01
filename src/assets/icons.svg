@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="logo" width="28" height="32" viewBox="0 0 28 32">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7552 13.5981C11.1501 13.9147 9.77955 15.2319 9.37415 16.8572C8.94816 18.3749 9.41119 20.0995 10.506 21.2035C11.5514 22.3054 13.1771 22.7951 14.6341 22.4193C16.2433 22.0457 17.5851 20.661 17.9226 18.9998C18.2662 17.5201 17.7847 15.8757 16.7187 14.8203C15.7083 13.7649 14.1649 13.292 12.7552 13.5981M12.3025 8.05922C8.49955 8.54683 5.15961 11.5421 4.17595 15.3417C3.3137 18.4172 4.0319 21.8874 6.01363 24.355C8.15177 27.1054 11.7716 28.5492 15.1588 27.9561C16.4327 27.7239 17.7374 27.3207 18.7828 26.5186C19.4475 25.9107 18.5317 24.6843 17.8156 25.2922C15.4531 26.7339 12.3848 26.8563 9.93595 25.5645C7.81222 24.4816 6.19267 22.413 5.63498 20.0467C4.96 17.3427 5.71936 14.3221 7.59202 12.2957C8.85968 10.8772 10.6171 9.92733 12.4774 9.6698C14.8893 9.30674 17.439 10.1215 19.2149 11.8355C20.7583 13.2878 21.7255 15.3691 21.8387 17.5179C21.8737 20.0467 21.8058 22.5798 21.8696 25.1086C22.0116 25.9212 23.2566 25.9276 23.415 25.1212C23.4727 22.7951 23.4192 20.4668 23.4397 18.1385C23.4727 15.1538 22.1433 12.188 19.8899 10.2967C17.8135 8.50884 14.988 7.66027 12.3025 8.05922M23.4418 0.0042217C24.7094 -0.00211085 25.9771 0 27.2448 0.00211085C27.2489 5.97371 27.2448 11.9432 27.2468 17.9148C27.2941 21.0747 26.2282 24.2347 24.304 26.7023C22.2174 29.4231 19.1058 31.2955 15.77 31.8232C12.6935 32.3382 9.45234 31.7176 6.76476 30.0986C4.32823 28.6485 2.35473 26.4025 1.20026 23.7661C-0.217621 20.5745 -0.384309 16.8256 0.726945 13.5094C1.73736 10.455 3.81582 7.79326 6.49929 6.11513C9.298 4.33569 12.7408 3.66866 15.982 4.26181C18.8095 4.74519 21.4271 6.22912 23.4439 8.30619C23.4397 5.53887 23.4418 2.77155 23.4418 0.0042217"/>
+    </symbol>
+    <symbol id="sunny" width="40" height="40" viewBox="0 0 40 40">
+        <g filter="url(#filter0_d_0_583)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 30C25.5228 30 30 25.5228 30 20C30 14.4772 25.5228 10 20 10C14.4772 10 10 14.4772 10 20C10 25.5228 14.4772 30 20 30Z"/>
+        </g>
+        <defs>
+            <filter id="filter0_d_0_583" x="0" y="0" width="40" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset/>
+                <feGaussianBlur stdDeviation="5"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_583"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_583" result="shape"/>
+            </filter>
+        </defs>
+    </symbol>
+    <symbol id="star" width="12" height="12" viewBox="0 0 12 12">
+        <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6 9.95016L2.2918 12L3 7.65836L0 4.58359L4.1459 3.95016L6 0L7.8541 3.95016L12 4.58359L9 7.65836L9.7082 12L6 9.95016Z"
+                fill="#1EB6FF"
+        />
+    </symbol>
+    <symbol id="featured-arrow" width="16" height="13" viewBox="0 0 16 13">
+        <path d="M1 6.99609H9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9 1.99609L15 6.99609L9 11.9961V1.99609Z"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+    </symbol>
+    <symbol id="nav-arrow" width="8" height="12" viewBox="0 0 8 12">
+        <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1 1L7 6L1 11V1Z"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+    </symbol>
+</svg>

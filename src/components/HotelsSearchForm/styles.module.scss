@@ -1,0 +1,45 @@
+@import '../../app-styles/variables';
+
+.searchForm {
+  &__filter {
+    overflow-x: hidden;
+  }
+
+  &__filterList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 15px 0;
+  }
+
+  &__filterItem {
+    flex-shrink: 0;
+    color: $white-color;
+    font-size: 16px;
+    padding: 5px 15px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+
+    &_active {
+      opacity: 1;
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .searchForm {
+    &__filterItem {
+      color: $primary-text-color;
+      background-color: $white-color;
+      border-radius: 50px;
+      opacity: 1;
+
+      &_active {
+        font-weight: 400;
+        color: $primary-color;
+      }
+    }
+  }
+}
