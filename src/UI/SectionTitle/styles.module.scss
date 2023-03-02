@@ -1,0 +1,13 @@
+@import '../../app-styles/breakpoints';
+@import '../../app-styles/variables';
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: $primary-text-color;
+  margin-bottom: 15px;
+
+  & span {
+    color: $primary-color;
+  }
+}

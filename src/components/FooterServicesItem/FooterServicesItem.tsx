@@ -5,9 +5,10 @@ import { FooterServicesLinks } from '../../constants/footer';
 
 interface Props {
   links: FooterServicesLinks[];
+  title: string;
 }
 
-const FooterServicesItem = ({ links }: Props) => {
+const FooterServicesItem = ({ links, title }: Props) => {
   const linksItems = links.map((link) => (
     <li key={link.name} className={styles.listItem}>
       <NavLink to={link.url} className={styles.listLink}>
@@ -18,7 +19,7 @@ const FooterServicesItem = ({ links }: Props) => {
 
   return (
     <div className={styles.servicesItem}>
-      <h2 className={styles.servicesTitle}>Dayaxe</h2>
+      <h2 className={styles.servicesTitle}>{title}</h2>
       <ul className={styles.servicesItemList}>{linksItems}</ul>
     </div>
   );

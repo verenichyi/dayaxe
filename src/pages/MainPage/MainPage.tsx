@@ -1,7 +1,12 @@
 import React from 'react';
+import Promotions from '../../modules/Promotions';
 
 const MainPage = () => {
-  return <>Main Page</>;
+  return (
+    <>
+      <Promotions />
+    </>
+  );
 };
 
 export default MainPage;
