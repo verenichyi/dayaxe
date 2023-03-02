@@ -1,6 +1,7 @@
 @import '../../app-styles/variables';
+@import '../../app-styles/breakpoints';
 
-.primarySection{
+.primarySection {
   background-color: $primary-color;
 }
 
@@ -16,22 +17,22 @@
 .content {
   color: #fff;
   padding-bottom: 25px;
+
+  @include screen-sm {
+    padding-bottom: 50px;
+  }
+
+  @include screen-md {
+    padding-bottom: 205px;
+  }
 }
 
 .title {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 24px;
-}
 
-@media screen and (min-width: 480px) {
-  .content {
-    padding-bottom: 50px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .title {
+  @include screen-md {
     line-height: 70px;
     font-size: 56px;
     max-width: 390px;
@@ -39,13 +40,7 @@
     margin-bottom: 45px;
   }
 
-  .content {
-    padding-bottom: 205px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .title {
+  @include screen-lg {
     max-width: 410px;
     margin-bottom: 110px;
     line-height: 65px;

@@ -1,7 +1,7 @@
 import React, { createContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import WeatherWidget from '../../components/WeatherWidget';
-import LogoLink from '../../components/LogoLink';
+import LogoLink from '../../UI/LogoLink';
 import NavMenu from '../../components/NavMenu';
 import styles from './styles.module.scss';
 import { Routes } from '../../enums/routes';
