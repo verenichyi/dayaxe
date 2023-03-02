@@ -1,7 +1,12 @@
 import React from 'react';
+import Hotels from '../../modules/Hotels';
 
 const MainPage = () => {
-  return <>Main Page</>;
+  return (
+    <>
+      <Hotels />
+    </>
+  );
 };
 
 export default MainPage;
