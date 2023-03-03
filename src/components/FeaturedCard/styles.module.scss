@@ -1,0 +1,120 @@
+@import '../../app-styles/variables';
+@import '../../app-styles/breakpoints';
+
+.featured {
+
+  &__card {
+    width: 100%;
+    position: relative;
+    color: $primary-text-color;
+    padding-bottom: 5px;
+  }
+
+  &__cardCategory {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    color: $white-color;
+    border-radius: 6px 0 6px 0;
+
+    &[data-type="Festive"] {
+      background-color: $festiv-back;
+    }
+    &[data-type='Tranquil'] {
+      background-color: $tranquil-back;
+    }
+    &[data-type='Family'] {
+      background-color: $family-back;
+    }
+  }
+
+  &__cardImage {
+    height: 160px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 18px;
+
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__cardTitle {
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__passLocationInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__cardPassType {
+    padding: 3px 10px;
+    color: $white-color;
+    background: $primary-gradient;
+    font-size: 12px;
+    border-radius: 12px;
+  }
+
+  &__cardLocation {
+    font-size: 12px;
+  }
+
+  &__ratingPriceInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__cardRating {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__cardRatingIcons {
+    position: relative;
+    white-space: nowrap;
+
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: $primary-color;
+    }
+  }
+
+  &__cardRatingCover {
+    width: calc(100% - var(--rating));
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $secondary-background;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.7;
+  }
+
+  &__cardRatingAmount {
+    font-size: 12px;
+    color: $primary-color;
+  }
+
+  &__cardPrice {
+    color: $primary-color;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}

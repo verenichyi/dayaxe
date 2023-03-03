@@ -1,0 +1,107 @@
+@import '../../app-styles/variables';
+@import '../../app-styles/breakpoints';
+@import '../../app-styles/mixins';
+
+.featured {
+  background: $secondary-background;
+  padding: 32px 0 37px;
+
+  @include screen-md {
+    padding: 40px 0 42px;
+  }
+
+  @include screen-xl {
+    padding: 50px 0 46px;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include screen-md {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    @include screen-md {
+      @include itemsWidthBetweenGaps(30px, 2);
+    }
+
+    @include screen-lg {
+      @include itemsWidthBetweenGaps(30px, 4);
+    }
+  }
+
+  &__all {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 5px;
+    gap: 10px;
+    border: 2px solid $primary-color;
+    border-radius: 50px;
+    margin-top: 36px;
+    transition: color 0.3s ease, background 0.2s ease;
+
+    @include screen-md {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: initial;
+      padding: 0;
+      margin: 0;
+      border-radius: 50px;
+      border: none;
+    }
+
+    span {
+      color: $primary-color;
+      font-weight: 700;
+    }
+
+    svg {
+      width: 16px;
+      height: 13px;
+      fill: $primary-color;
+      stroke: $primary-color;
+    }
+
+    &:hover {
+      border: none;
+      padding: 22px 7px;
+      background: $primary-gradient;
+
+      @include screen-md {
+        padding: 0;
+        background: transparent;
+      }
+    }
+
+    &:hover svg {
+      fill: $white-color;
+      stroke: $white-color;
+
+      @include screen-md {
+        fill: $primary-color;
+        stroke: $primary-color;
+      }
+    }
+
+    &:hover span {
+      color: $white-color;
+
+      @include screen-md {
+        color: $primary-color;
+      }
+    }
+  }
+}

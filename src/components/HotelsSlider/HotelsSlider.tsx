@@ -12,8 +12,8 @@ const HotelsSlider = ({ items }: Props) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
 
-  const hotelsLogosItems = items.map((logo) => (
-    <img ref={imgRef} className={styles.slider__item} key={logo} src={logo} alt="hotel" />
+  const hotelsLogosItems = items.map((logo, index) => (
+    <img ref={imgRef} className={styles.slider__item} key={index} src={logo} alt="hotel" />
   ));
 
   const setElementsPerScreenAmount = () => {
