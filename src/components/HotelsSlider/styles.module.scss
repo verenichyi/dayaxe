@@ -1,0 +1,59 @@
+@import '../../app-styles/variables';
+@import '../../app-styles/breakpoints';
+
+.slider {
+  &__wrapper {
+    position: relative;
+  }
+
+  &__carousel {
+    white-space: nowrap;
+    font-size: 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+
+    img {
+      scroll-snap-align: center;
+      object-fit: cover;
+      height: 73px;
+      width: calc(100% / 3);
+
+      @include screen-sm {
+        width: calc(100% / 5);
+      }
+
+      @include screen-md {
+        width: calc(100% / 8);
+      }
+
+      @include screen-lg {
+        height: 141px;
+      }
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    gap: 8px;
+  }
+
+  &__paginationCircle {
+    cursor: pointer;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid $grey;
+
+    &:hover,
+    &_active {
+      border: 2px solid $primary-color;
+      background-color: $primary-color;
+    }
+  }
+}
