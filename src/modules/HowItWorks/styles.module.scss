@@ -1,0 +1,115 @@
+@import '../../app-styles/variables';
+@import '../../app-styles/breakpoints';
+
+.howItWorks {
+  background: $how-it-works-background;
+  padding: 37px 0 17px;
+
+  @include screen-md {
+    padding: 42px 0 28px;
+  }
+
+  @include screen-lg {
+    padding: 46px 0 50px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @include screen-lg {
+      flex-direction: row;
+    }
+  }
+
+  &__card {
+    position: relative;
+    width: 100%;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    padding: 45px 25px 25px;
+    color: $primary-text-color;
+    background-color: $white-color;
+    box-shadow: 0 12px 48px 0 rgb(0 0 0 / 6%);
+    border-radius: 6px;
+    overflow: hidden;
+
+    @include screen-sm {
+      min-height: 250px;
+    }
+
+    @include screen-md {
+      padding: 50px 40px 40px;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 30px;
+      min-height: 190px;
+    }
+
+    @include screen-lg {
+      padding: 70px 40px 40px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      min-height: 440px;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 35px;
+      padding: 7px 0 0 12px;
+      font-weight: 700;
+      font-size: 18px;
+      color: $white-color;
+      border-radius: 6px 0 50px 0;
+      background: linear-gradient(135deg, #2db9fe 0%, #4edbfc 100%);
+      box-shadow: 0 8px 20px 0 rgb(30 182 255 / 24%);
+    }
+  }
+
+  @for $i from 1 through 3 {
+    & [data-order="#{$i}"]:before {
+      content: "#{$i}";
+    }
+  }
+
+  &__cardTitle {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+    @include screen-md {
+      max-width: 170px;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+
+    @include screen-lg {
+      font-size: 48px;
+      line-height: 54px;
+      max-width: none;
+    }
+  }
+
+  &__cardDescription {
+    flex-grow: 1;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__cardButton {
+    @include screen-md {
+      min-width: 155px;
+    }
+
+    @include screen-lg {
+      min-width: initial;
+    }
+  }
+}
