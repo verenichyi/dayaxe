@@ -1,0 +1,73 @@
+@import '../../app-styles/variables';
+@import '../../app-styles/breakpoints';
+@import '../../app-styles/mixins';
+
+.navSlider {
+  @include screen-xl {
+    position: relative;
+  }
+
+  &__carousel {
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 30px;
+
+    &_dragging {
+      cursor: grab;
+
+      & .navSlider__item {
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+    width: 100%;
+    scroll-snap-align: start;
+
+    &:hover .nav-slider__card-title {
+      color: $primary-color;
+    }
+
+    @include screen-md {
+      @include itemsWidthBetweenGaps(30px, 2)
+    }
+
+    @include screen-lg {
+      @include itemsWidthBetweenGaps(30px, 3)
+    }
+  }
+
+  &__prevButton,
+  &__nextButton {
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none;
+  }
+
+  &__prevButton {
+    transform: translate(-110%, 0);
+
+    @include screen-xl {
+      right: initial;
+      left: 0;
+      top: 50%;
+      transform: translate(-90px, -50%);
+    }
+  }
+
+  &__nextButton {
+    @include screen-xl {
+      right: 0;
+      top: 50%;
+      transform: translate(90px, -50%);
+    }
+  }
+}

@@ -34,9 +34,9 @@ const Footer = () => {
     <footer className={styles.footer}>
       <Container>
         <div className={styles.footer__services}>
-          <FooterServicesItem links={dayaxeLinks} />
-          <FooterServicesItem links={discoverLinks} />
-          <FooterServicesItem links={partnersLinks} />
+          <FooterServicesItem links={dayaxeLinks} title={'Dayaxe'}/>
+          <FooterServicesItem links={discoverLinks} title={'Discover'}/>
+          <FooterServicesItem links={partnersLinks} title={'Partners'}/>
           <div className={styles.footer__others}>
             <h2 className={styles.footer__othersTitle}>{othersTitle}</h2>
             <div className={styles.footer__othersWrapper}>

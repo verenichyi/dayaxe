@@ -1,0 +1,24 @@
+@import '../../app-styles/variables';
+@import '../../app-styles/breakpoints';
+
+
+.promotions {
+  background: $our-promotions-background;
+  padding: 17px 0 25px;
+
+  @include screen-md {
+    padding: 36px 0 43px;
+  }
+
+  @include screen-lg {
+    padding: 50px 0 43px;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+}
