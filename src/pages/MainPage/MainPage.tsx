@@ -1,7 +1,12 @@
 import React from 'react';
+import HowItWorks from '../../modules/HowItWorks';
 
 const MainPage = () => {
-  return <>Main Page</>;
+  return (
+    <>
+      <HowItWorks />
+    </>
+  );
 };
 
 export default MainPage;
