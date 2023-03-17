@@ -1,7 +1,7 @@
 import React, { CSSProperties } from 'react';
 import styles from './styles.module.scss';
 import icons from '../../assets/icons.svg';
-import { IFeaturedCard } from '../../constants/featured-cards';
+import { HotelPass } from '../../models/HotelPass/HotelPass';
 
 const FeaturedCard = ({
   type,
@@ -12,7 +12,7 @@ const FeaturedCard = ({
   ratingPercentage,
   ratingAmount,
   price,
-}: IFeaturedCard) => {
+}: HotelPass) => {
   const generateStars = () => {
     const stars = [];
 
@@ -51,7 +51,7 @@ const FeaturedCard = ({
           <span className={styles.featured__cardRatingAmount}>{ratingAmount}</span>
         </div>
         <span className={styles.featured__cardPrice}>
-          <span>{price}</span>/guest
+          <span>{price}$</span>/guest
         </span>
       </div>
     </article>
