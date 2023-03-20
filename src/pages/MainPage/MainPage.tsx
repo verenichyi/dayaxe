@@ -8,8 +8,8 @@ const MainPage = () => {
   return (
     <>
       <Hotels />
-      <HowItWorks />
       <Featured />
+      <HowItWorks />
       <Promotions />
     </>
   );

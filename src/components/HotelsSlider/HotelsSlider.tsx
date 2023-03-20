@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './styles.module.scss';
+import { Hotel } from "../../models/Hotels/Hotel";
 
 interface Props {
-  items: string[];
+  items: Hotel[];
 }
 
 const HotelsSlider = ({ items }: Props) => {
@@ -12,8 +13,8 @@ const HotelsSlider = ({ items }: Props) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
 
-  const hotelsLogosItems = items.map((logo, index) => (
-    <img ref={imgRef} className={styles.slider__item} key={index} src={logo} alt="hotel" />
+  const hotelsLogosItems = items.map((hotel) => (
+    <img ref={imgRef} className={styles.slider__item} key={hotel._id} src={hotel.image} alt="hotel" />
   ));
 
   const setElementsPerScreenAmount = () => {
