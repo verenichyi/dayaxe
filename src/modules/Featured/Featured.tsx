@@ -1,28 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import Container from '../../UI/Container';
 import SectionTitle from '../../UI/SectionTitle';
 import FeaturedCard from '../../components/FeaturedCard';
 import icons from '../../assets/icons.svg';
 import styles from './styles.module.scss';
-import { handleAxiosError } from '../../utils/handleAxiosErrors';
-import HotelPassesService from '../../http/services/HotelPassesService';
-import { HotelPass } from '../../models/HotelPass/HotelPass';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+import { selectHotelPasses } from '../../redux/store/selectors';
+import { getAllHotelPasses } from '../../redux/asyncActions/hotel-passes';
 
 const Featured = () => {
-  const [hotelPasses, setHotelPasses] = useState<HotelPass[]>([]);
+  const dispatch = useAppDispatch();
+  const { hotelPasses } = useAppSelector(selectHotelPasses);
 
   useEffect(() => {
-    const getHotelPasses = async () => {
-      try {
-        const { data } = await HotelPassesService.getAllHotelPasses();
-        setHotelPasses(data);
-      } catch (error) {
-        alert(handleAxiosError(error));
-      }
-    };
-
-    getHotelPasses();
+    dispatch(getAllHotelPasses());
   }, []);
 
   const cards = hotelPasses.map((hotelPass) => (
