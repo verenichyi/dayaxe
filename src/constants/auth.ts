@@ -1,1 +1,1 @@
-export const localStorageTokenKey = 'DayaxeAuthToken';
+export const localStorageTokenKey = 'DayaxeToken';
