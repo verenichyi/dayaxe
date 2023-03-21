@@ -1,0 +1,46 @@
+@import 'src/app-styles/breakpoints';
+@import 'src/app-styles/variables';
+
+.signInSection {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 20px;
+  align-items: flex-start;
+  padding: 40px 10vw;
+
+  color: $primary-text-color;
+  cursor: default;
+
+  @include screen-md {
+    padding: 50px 20vw;
+  }
+
+  @include screen-lg {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.title {
+  text-align: center;
+  color: $primary-color;
+}
+
+.signUpLink {
+  color: $primary-color;
+}
+
+.formContainer {
+  width: 80vw;
+  margin: 0 auto;
+
+  @include screen-md {
+    width: 60vw;
+  }
+}

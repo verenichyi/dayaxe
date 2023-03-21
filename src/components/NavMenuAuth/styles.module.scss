@@ -6,8 +6,16 @@
   justify-content: left;
   gap: 25px;
 
+  &__username {
+    font-size: 20px;
+    font-weight: 700;
+    color: $white-color;
+    text-transform: capitalize;
+  }
+
   &__loginButton,
-  &__signupButton {
+  &__signupButton,
+  &__logoutButton {
     font-size: 16px;
     font-weight: 700;
     color: $white-color;
@@ -15,7 +23,8 @@
     cursor: pointer;
   }
 
-  &__loginButton {
+  &__loginButton,
+  &__logoutButton {
     border-radius: 50px;
     padding: 13px 40px;
     background: $primary-gradient;
@@ -28,7 +37,8 @@
 
 .auth.auth_secondary {
   .auth {
-    &__loginButton {
+    &__loginButton,
+    &__logoutButton {
       cursor: pointer;
       padding: 14px 40px;
       border: none;
@@ -44,6 +54,10 @@
         background: transparent;
         color: $primary-color;
       }
+    }
+
+    &__username {
+      color: $primary-color;
     }
 
     &__signupButton {

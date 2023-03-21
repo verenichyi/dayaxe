@@ -1,25 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Container from '../../UI/Container';
 import HotelsSlider from '../../components/HotelsSlider';
 import styles from './styles.module.scss';
-import HotelsService from '../../http/services/HotelsService';
-import { handleAxiosError } from '../../utils/handleAxiosErrors';
-import { Hotel } from '../../models/Hotels/Hotel';
+import { getAllHotels } from '../../redux/asyncActions/hotels';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+import { selectHotels } from '../../redux/store/selectors';
 
 const Hotels = () => {
-  const [hotels, setHotels] = useState<Hotel[]>([]);
+  const dispatch = useAppDispatch();
+  const { hotels } = useAppSelector(selectHotels);
 
   useEffect(() => {
-    const getHotels = async () => {
-      try {
-        const { data } = await HotelsService.getAllHotels();
-        setHotels(data);
-      } catch (error) {
-        alert(handleAxiosError(error));
-      }
-    };
-
-    getHotels();
+    dispatch(getAllHotels());
   }, []);
 
   return hotels.length ? (
