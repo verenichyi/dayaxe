@@ -9,7 +9,7 @@ import Input from '../../UI/Input';
 import Eye from '../../UI/Eye';
 import MainButton from '../../UI/MainButton';
 import { useAppDispatch } from '../../hooks/redux';
-import { loginUser } from '../../redux/asyncActions/auth';
+import { loginUser } from '../../redux/asyncActions/user';
 import { Routes } from '../../enums/routes';
 
 const SignInForm = () => {

@@ -1,19 +1,21 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import styles from './styles.module.scss';
 import { HeaderContext } from '../../modules/Header/Header';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { selectAuth } from '../../redux/store/selectors';
 import { Routes } from '../../enums/routes';
-import { authActions } from '../../redux/slices/auth';
+import { userActions } from '../../redux/slices/user';
 
 const NavMenuAuth = () => {
   const { isPrimaryPage } = useContext(HeaderContext);
   const { isAuthorized, user } = useAppSelector(selectAuth);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    dispatch(authActions.logout());
+    dispatch(userActions.logout());
+    navigate(0);
   };
 
   return (
