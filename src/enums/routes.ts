@@ -5,5 +5,6 @@ export const enum Routes {
   Help = '/help',
   HowItWorks = '/how-it-works',
   ForPartners = '/for-partners',
+  SearchHotels = '/search-hotels',
   NotFound = '*',
 }
