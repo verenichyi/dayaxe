@@ -1,13 +1,17 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import pinIcon from '../../assets/images/header/pin.png';
-import { mockDateValue } from "../../constants/search-form";
+import { Path, UseFormRegister } from 'react-hook-form';
+import { SearchForm } from '../../models/HotelPass/HotelPass';
 
-const SearchCalendar = () => {
+interface Props {
+  name: Path<SearchForm>;
+  register: UseFormRegister<SearchForm>;
+}
+
+const SearchCalendar = ({ name, register }: Props) => {
   return (
     <div className={styles.calendar}>
-      <div>{mockDateValue}</div>
-      <img src={pinIcon} className={styles.icon} alt="pin" />
+      <input {...register(name)} className={styles.datePicker} type="date" />
     </div>
   );
 };

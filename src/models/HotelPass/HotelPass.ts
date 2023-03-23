@@ -9,3 +9,8 @@ export interface HotelPass {
   ratingAmount: string,
   price: string
 }
+
+export interface SearchForm {
+  location: string,
+  date: string
+}

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import MainLayout from './layouts/MainLayout';
@@ -7,9 +7,10 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import './app-styles/App.scss';
 import { Routes as RoutePaths } from './enums/routes';
-import { useAppDispatch } from "./hooks/redux";
-import { checkAuth } from "./redux/asyncActions/user";
-import AuthLayout from "./layouts/AuthLayout";
+import { useAppDispatch } from './hooks/redux';
+import { checkAuth } from './redux/asyncActions/user';
+import AuthLayout from './layouts/AuthLayout';
+import SearchHotels from './modules/SearchHotels';
 
 const App = () => {
   const dispatch = useAppDispatch();
@@ -26,6 +27,7 @@ const App = () => {
       </Route>
       <Route path={RoutePaths.Home} element={<MainLayout />}>
         <Route index element={<MainPage />} />
+        <Route path={RoutePaths.SearchHotels} element={<SearchHotels />} />
         <Route path={RoutePaths.Help} element={'<Help />'} />
         <Route path={RoutePaths.HowItWorks} element={'<HowItWorks />'} />
         <Route path={RoutePaths.ForPartners} element={'<ForPartners />'} />

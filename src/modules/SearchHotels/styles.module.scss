@@ -1,0 +1,52 @@
+@import '../../app-styles/variables';
+@import '../../app-styles/breakpoints';
+@import '../../app-styles/mixins';
+
+.featured {
+  background: $secondary-background;
+  padding: 32px 0 37px;
+
+  @include screen-md {
+    padding: 40px 0 42px;
+  }
+
+  @include screen-xl {
+    padding: 50px 0 46px;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include screen-md {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    @include screen-md {
+      @include itemsWidthBetweenGaps(30px, 2);
+    }
+
+    @include screen-lg {
+      @include itemsWidthBetweenGaps(30px, 4);
+    }
+  }
+
+  &__back {
+    cursor: pointer;
+
+    span {
+      margin-top: 50px;
+      color: $primary-color;
+      font-weight: 700;
+    }
+  }
+}
