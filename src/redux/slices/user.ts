@@ -1,7 +1,12 @@
 import { AnyAction, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AuthResponse } from '../../models/Auth/authResponse';
 import { User } from '../../models/User/User';
-import { checkAuth, loginUser, registerUser } from '../asyncActions/auth';
+import {
+  addHotelPassToFavorites,
+  checkAuth, deleteHotelPassFomFavorites,
+  loginUser,
+  registerUser
+} from "../asyncActions/user";
 import { localStorageTokenKey } from '../../constants/auth';
 
 interface State {
@@ -22,8 +27,8 @@ export const initialState: State = {
 
 const isError = (action: AnyAction) => action.type.endsWith('rejected');
 
-const auth = createSlice({
-  name: 'auth',
+const user = createSlice({
+  name: 'user',
   initialState,
   reducers: {
     logout: (state) => {
@@ -76,6 +81,24 @@ const auth = createSlice({
       state.isAuthorized = true;
     });
 
+    builder.addCase(addHotelPassToFavorites.pending, (state) => {
+      state.loading = true;
+      state.error = null;
+    });
+    builder.addCase(addHotelPassToFavorites.fulfilled, (state, action: PayloadAction<User>) => {
+      state.loading = false;
+      state.user = action.payload;
+    });
+
+    builder.addCase(deleteHotelPassFomFavorites.pending, (state) => {
+      state.loading = true;
+      state.error = null;
+    });
+    builder.addCase(deleteHotelPassFomFavorites.fulfilled, (state, action: PayloadAction<User>) => {
+      state.loading = false;
+      state.user = action.payload;
+    });
+
     builder.addMatcher(isError, (state, action: PayloadAction<string>) => {
       state.loading = false;
       state.error = action.payload;
@@ -84,5 +107,5 @@ const auth = createSlice({
   },
 });
 
-export const authActions = auth.actions;
-export default auth.reducer;
+export const userActions = user.actions;
+export default user.reducer;

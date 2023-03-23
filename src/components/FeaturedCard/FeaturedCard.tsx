@@ -1,9 +1,16 @@
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 import icons from '../../assets/icons.svg';
 import { HotelPass } from '../../models/HotelPass/HotelPass';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+import { selectAuth } from '../../redux/store/selectors';
+import {
+  addHotelPassToFavorites,
+  deleteHotelPassFomFavorites,
+} from '../../redux/asyncActions/user';
 
 const FeaturedCard = ({
+  _id,
   type,
   image,
   title,
@@ -13,6 +20,34 @@ const FeaturedCard = ({
   ratingAmount,
   price,
 }: HotelPass) => {
+  const dispatch = useAppDispatch();
+  const { user } = useAppSelector(selectAuth);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  useEffect(() => {
+    if (user) {
+      setIsFavorite(user.favoriteHotelPasses.includes(_id));
+    }
+  }, [user]);
+
+  useEffect(() => {
+    if (user) {
+      setIsFavorite(user.favoriteHotelPasses.includes(_id));
+    }
+  }, []);
+
+  const handleFavorite = () => {
+    if (user) {
+      const payload = { userId: user._id, body: { hotelPassId: _id } };
+
+      if (isFavorite) {
+        dispatch(deleteHotelPassFomFavorites(payload));
+      } else {
+        dispatch(addHotelPassToFavorites(payload));
+      }
+    }
+  };
+
   const generateStars = () => {
     const stars = [];
 
@@ -27,7 +62,9 @@ const FeaturedCard = ({
   };
 
   return (
-    <article className={styles.featured__card}>
+    <article
+      className={`${styles.featured__card} ${isFavorite ? styles.featured__card_isFavorite : ''}`}
+    >
       <span className={styles.featured__cardCategory} data-type={type}>
         {type}
       </span>
@@ -50,6 +87,11 @@ const FeaturedCard = ({
           </div>
           <span className={styles.featured__cardRatingAmount}>{ratingAmount}</span>
         </div>
+        <span className={styles.featured__favorite}>
+          <svg onClick={handleFavorite}>
+            <use xlinkHref={`${icons}#heart`} />
+          </svg>
+        </span>
         <span className={styles.featured__cardPrice}>
           <span>{price}$</span>/guest
         </span>

@@ -8,7 +8,7 @@ import SignUp from './pages/SignUp';
 import './app-styles/App.scss';
 import { Routes as RoutePaths } from './enums/routes';
 import { useAppDispatch } from "./hooks/redux";
-import { checkAuth } from "./redux/asyncActions/auth";
+import { checkAuth } from "./redux/asyncActions/user";
 import AuthLayout from "./layouts/AuthLayout";
 
 const App = () => {

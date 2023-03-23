@@ -2,7 +2,6 @@
 @import '../../app-styles/breakpoints';
 
 .featured {
-
   &__card {
     width: 100%;
     position: relative;
@@ -21,7 +20,7 @@
     color: $white-color;
     border-radius: 6px 0 6px 0;
 
-    &[data-type="Festive"] {
+    &[data-type='Festive'] {
       background-color: $festiv-back;
     }
     &[data-type='Tranquil'] {
@@ -29,6 +28,20 @@
     }
     &[data-type='Family'] {
       background-color: $family-back;
+    }
+  }
+
+  &__favorite {
+    & svg {
+      cursor: pointer;
+      width: 17px;
+      height: 15px;
+      fill: $white-color;
+      filter: drop-shadow(0px 0px 5px $primary-color);
+
+      &:hover {
+        fill: $primary-color;
+      }
     }
   }
 
@@ -75,6 +88,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 5px;
   }
 
   &__cardRating {
@@ -115,6 +129,18 @@
 
     & span {
       font-weight: 700;
+    }
+  }
+}
+
+.featured__card.featured__card_isFavorite {
+  .featured__favorite {
+    & svg {
+      fill: $primary-color;
+
+      &:hover {
+        fill: $white-color;
+      }
     }
   }
 }

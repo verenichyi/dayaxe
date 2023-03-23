@@ -1,10 +1,14 @@
 export interface RegisterUserDto {
-	username: string;
-	password: string;
-	email: string;
+  username: string;
+  password: string;
+  email: string;
 }
 
 export interface LoginUserDto {
-	password: string;
-	email: string;
+  password: string;
+  email: string;
+}
+
+export interface FavoriteHotelPassDto {
+  hotelPassId: string;
 }

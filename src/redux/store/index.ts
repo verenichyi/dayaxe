@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import auth from '../slices/auth';
+import auth from '../slices/user';
 import hotels from '../slices/hotels';
 import hotelPasses from '../slices/hotel-passes';
 
